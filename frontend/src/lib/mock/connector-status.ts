@@ -4,7 +4,7 @@ type ConnectorStatus = components["schemas"]["ConnectorStatusDto"];
 
 export const MOCK_CONNECTOR_STATUS: ConnectorStatus[] = [
   {
-    retailer: "TESCO",
+    retailer: "ASOS",
     healthy: true,
     disabled: false,
     circuitState: "CLOSED",
@@ -13,18 +13,6 @@ export const MOCK_CONNECTOR_STATUS: ConnectorStatus[] = [
     lastFailureReason: null,
     recentResultCount: 24,
     staleCacheUsageCount: 0,
-    apifyConnector: true,
-  },
-  {
-    retailer: "SAINSBURYS",
-    healthy: true,
-    disabled: false,
-    circuitState: "CLOSED",
-    lastSuccessAt: "2026-04-12T11:05:00Z",
-    lastFailureAt: "2026-04-12T10:42:00Z",
-    lastFailureReason: "partial DOM parse",
-    recentResultCount: 18,
-    staleCacheUsageCount: 1,
     apifyConnector: false,
   },
   {

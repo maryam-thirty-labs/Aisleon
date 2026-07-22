@@ -3,13 +3,9 @@ import { type CSSProperties } from "react";
 type RetailerStyle = { bg: string; fg: string; label: string };
 
 const RETAILER_STYLE: Record<string, RetailerStyle> = {
-  TESCO: { bg: "#E8F5E8", fg: "#1A5C1A", label: "Tesco" },
-  SAINSBURYS: { bg: "#FFF0DC", fg: "#8A4F10", label: "Sainsbury's" },
   BOOTS: { bg: "#D8E8F5", fg: "#1A3F60", label: "Boots" },
   ARGOS: { bg: "#F5DDD3", fg: "#7A2A14", label: "Argos" },
   ASOS: { bg: "#1C1814", fg: "#FBF5EC", label: "ASOS" },
-  ASDA: { bg: "#E8F0FF", fg: "#1A3A8A", label: "Asda" },
-  MORRISONS: { bg: "#FFF5E0", fg: "#7A4A00", label: "Morrisons" },
 };
 
 const GENERIC = { bg: "var(--oat)", fg: "var(--muted)" };

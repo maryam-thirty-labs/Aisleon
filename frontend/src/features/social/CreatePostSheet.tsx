@@ -26,15 +26,7 @@ const REACTIONS: { key: ReactionType; label: string }[] = [
   { key: "WOULDNT_RECOMMEND", label: "Wouldn't recommend" },
 ];
 
-const RETAILERS: RetailerKey[] = [
-  "TESCO",
-  "SAINSBURYS",
-  "BOOTS",
-  "ARGOS",
-  "ASDA",
-  "MORRISONS",
-  "OCADO",
-];
+const RETAILERS: RetailerKey[] = ["BOOTS", "ARGOS", "ASOS"];
 
 export function CreatePostSheet({
   open,
@@ -44,7 +36,7 @@ export function CreatePostSheet({
   const [caption, setCaption] = useState("");
   const [productName, setProductName] = useState("");
   const [brand, setBrand] = useState("");
-  const [retailer, setRetailer] = useState<RetailerKey>("TESCO");
+  const [retailer, setRetailer] = useState<RetailerKey>("BOOTS");
   const [price, setPrice] = useState("");
   const [reaction, setReaction] = useState<ReactionType>("TRIED_THIS");
   const [submitting, setSubmitting] = useState(false);
@@ -85,7 +77,7 @@ export function CreatePostSheet({
     setProductName("");
     setBrand("");
     setPrice("");
-    setRetailer("TESCO");
+    setRetailer("BOOTS");
     setReaction("TRIED_THIS");
     setError(null);
     onClose();

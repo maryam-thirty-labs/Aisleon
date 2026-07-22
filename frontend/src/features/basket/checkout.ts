@@ -9,13 +9,9 @@ const USE_MOCKS = process.env.NEXT_PUBLIC_USE_MOCKS === "true";
 type Basket = components["schemas"]["BasketDto"];
 
 export const RETAILER_FALLBACK_URLS: Record<string, string> = {
-  TESCO: "https://www.tesco.com",
-  SAINSBURYS: "https://www.sainsburys.co.uk",
   BOOTS: "https://www.boots.com",
   ARGOS: "https://www.argos.co.uk",
-  ASDA: "https://www.asda.com",
-  MORRISONS: "https://www.morrisons.com",
-  OCADO: "https://www.ocado.com",
+  ASOS: "https://www.asos.com",
 };
 
 export type ApproveResult =

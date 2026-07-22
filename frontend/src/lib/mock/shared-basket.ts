@@ -8,8 +8,8 @@ export const MOCK_SHARED_BASKET: SharedBasket = {
   shareId: "sb-123abc",
   basket: MOCK_BASKET_MIXED_DIETARY,
   poster: { ...MOCK_PROFILE, isSelf: false },
-  title: "Halal-friendly weekly shop",
-  description: "Mostly certified halal with a couple of verify-before-you-buy items.",
-  tags: ["halal", "weekly", "family"],
+  title: "Halal-friendly skincare edit",
+  description: "Mostly certified halal cosmetics with a couple of verify-before-you-buy items.",
+  tags: ["halal", "skincare", "beauty"],
   estimatedSaving: 8.4,
 };

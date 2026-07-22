@@ -35,7 +35,7 @@ const MOCK_PROFILE_BASKETS: Basket[] = [
   MOCK_BASKET_APPROVED,
 ];
 
-const MOCK_TASTE_TAGS = ["halal", "family", "budget-first"];
+const MOCK_TASTE_TAGS = ["halal-beauty", "skincare", "budget-first"];
 
 export default function ProfilePage() {
   const params = useParams<{ handle: string }>();

@@ -51,6 +51,13 @@ export function useApiQuery<T>({
   // eslint-disable-next-line react-hooks/refs
   fetcherRef.current = fetcher;
 
+  // mockData is often built from an inline literal by callers, so its identity
+  // changes every render. Keep it in a ref so the effect can read the latest
+  // value without listing it as a dependency (which would loop forever).
+  const mockDataRef = useRef(mockData);
+  // eslint-disable-next-line react-hooks/refs
+  mockDataRef.current = mockData;
+
   const [state, setState] = useState<QueryState<T>>(() => {
     if (!enabled) return { data: null, isLoading: false, error: null };
     if (USE_MOCKS) return { data: mockData, isLoading: false, error: null };
@@ -65,7 +72,7 @@ export function useApiQuery<T>({
     }
     if (USE_MOCKS) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setState({ data: mockData, isLoading: false, error: null });
+      setState({ data: mockDataRef.current, isLoading: false, error: null });
       return;
     }
     let cancelled = false;
@@ -87,7 +94,10 @@ export function useApiQuery<T>({
     return () => {
       cancelled = true;
     };
-  }, [key, enabled, mockData]);
+    // mockData intentionally omitted — read via ref to avoid an infinite loop
+    // when callers pass inline-literal fixtures. key uniquely identifies the query.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, enabled]);
 
   return state;
 }

@@ -9,13 +9,12 @@ export const MOCK_BUDGET_SUMMARY: BudgetSummary = {
   basketsCount: 4,
   avgBasket: 54.6,
   byRetailer: {
-    TESCO: 95.2,
-    SAINSBURYS: 72.3,
-    BOOTS: 30.9,
-    ARGOS: 20,
+    BOOTS: 95.2,
+    ASOS: 72.3,
+    ARGOS: 50.9,
   },
   insights: [
-    "You saved £12 at Boots this month by switching to Clubcard prices.",
+    "You saved £12 at Boots this month using Advantage Card points.",
     "Your average basket is £5 under budget — steady trend.",
   ],
 };

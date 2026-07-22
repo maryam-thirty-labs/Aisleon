@@ -1,4 +1,5 @@
 import type { components } from "@/types/api.generated";
+import { IMG } from "./images";
 
 type FeedPage = components["schemas"]["FeedPageDto"];
 
@@ -9,13 +10,14 @@ export const MOCK_FEED_PAGE: FeedPage = {
       type: "PRODUCT",
       authorHandle: "layla",
       authorDisplayName: "Layla",
-      caption: "Good halal mince find at Sainsbury's this week.",
+      caption:
+        "Best retinol serum I've found under £20 — Boots have it on Advantage points too.",
       product: {
-        retailer: "SAINSBURYS",
-        name: "British halal beef mince 500g",
-        brand: "Sainsbury's",
-        price: 4.75,
-        imageUrl: null,
+        retailer: "BOOTS",
+        name: "No7 Advanced Retinol 1.5% Complex serum",
+        brand: "No7",
+        price: 17.95,
+        imageUrl: IMG.serum,
         dietaryTags: ["HALAL_LIKELY"],
       },
       basket: null,
@@ -28,13 +30,14 @@ export const MOCK_FEED_PAGE: FeedPage = {
       type: "BASKET",
       authorHandle: "amira",
       authorDisplayName: "Amira",
-      caption: "Weekly £65 halal shop — cut £6 from last week.",
+      caption: "Full skincare restock for under £65 — swapped two brands to stay in budget.",
       product: null,
       basket: {
         basketId: "bk_approved_020",
         title: "Halal skincare bundle",
         total: 64.3,
-        itemThumbnails: [],
+        itemThumbnails: [IMG.serum, IMG.moisturiser, IMG.cleanser],
+        category: "HEALTH_BEAUTY",
       },
       reactions: [
         { type: "TRIED_THIS", count: 12 },
@@ -54,7 +57,7 @@ export const MOCK_FEED_PAGE: FeedPage = {
         basketId: "bk_fashion_022",
         title: "Spring weekend fit",
         total: 78.4,
-        itemThumbnails: [],
+        itemThumbnails: [IMG.dress, IMG.trainers, IMG.tote],
         category: "FASHION",
         subcategoryMix: ["DRESSES", "FOOTWEAR", "OUTERWEAR"],
       },
